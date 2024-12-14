@@ -1,0 +1,291 @@
+/* General Styles */
+.aboutPage {
+    padding: 100px 20px 20px; /* Add padding to the top */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Page Title */
+  .pageTitle {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* History Section */
+  .historySection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* Stack image and text vertically on mobile */
+    text-align: center; /* Ensures the text is also centered */
+  }
+  
+/* History Section Image (Mas Oyama) */
+.historyImage img {
+    width: 250px !important; /* Force the image width to 10px */
+    height: auto !important; /* Maintain aspect ratio */
+    display: block;
+    margin-left: 20px; /* Space between the image and the text */
+    margin-top: 10px;
+    border-radius: 50%; /* Makes the image round */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both zoom and shadow */
+  }
+  
+  /* Hover effect for image */
+  .historyImage img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+  }
+  
+  
+  
+  /* History Text */
+  .historyText {
+    flex: 1;
+  }
+  
+  .historyText h2 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .historyText p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .historySection {
+      padding: 20px;
+    }
+  
+    .historyImage {
+      width: 250px; /* Adjust for mobile */
+      margin-bottom: 20px;
+    }
+  
+    .historyText h2 {
+      font-size: 2rem;
+    }
+  
+    .historyText p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Further adjustments for very small mobile devices */
+    .historyImage {
+      width: 180px; /* Further reduce image size on small mobile devices */
+    }
+  }
+  
+  /* F.I.K.K Section */
+  .fikkSection {
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: #e8f1f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-direction: row; /* Keep side-by-side layout */
+    text-align: left; /* Align text to the left */
+    justify-content: space-between; /* Space between text and logo */
+  }
+  
+  .fikkText {
+    max-width: 80%; /* Make text take more space */
+  }
+  
+  .fikkText h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .fikkText p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+/* F.I.K.K Logo */
+.fikkLogo {
+    width: 200px !important; /* Force the logo width to 10px */
+    height: auto !important; /* Maintain aspect ratio */
+    display: block;
+    margin-left: 20px; /* Space between the logo and text */
+    margin-right: auto;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .fikkLogo:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  
+  
+  
+  /* Leadership Section */
+  .leadershipSection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leaderCard {
+    text-align: center;
+    width: 30%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leaderCard img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .leaderCard img:hover {
+    transform: scale(1.1);
+  }
+  
+  .leaderCard h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .leaderCard p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .profileBtn {
+    background-color: #fd7e14;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  
+  .profileBtn:hover {
+    background-color: #d76b0f;
+    transform: scale(1.05);
+  }
+  
+  .profileBtn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Discover Karate Section */
+  .discoverKarateSection {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #e8f1f7;
+  }
+  
+  .discoverKarateSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .discoverKarateSection p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .discoverKarateBtn {
+    background-color: #fd7e14;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .discoverKarateBtn:hover {
+    background-color: #d76b0f;
+    transform: scale(1.05);
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    /* History Section on mobile */
+    .historySection {
+      padding: 20px;
+    }
+  
+    .historyImage {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    /* F.I.K.K Section on mobile */
+    .fikkSection {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    /* Leadership Section on mobile */
+    .leadershipSection {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .leaderCard {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pageTitle {
+      font-size: 2rem;
+    }
+  
+    .historyText h2 {
+      font-size: 2rem;
+    }
+  
+    .historyText p {
+      font-size: 1rem;
+    }
+  
+    .discoverKarateSection h2 {
+      font-size: 2rem;
+    }
+  
+    .discoverKarateSection p {
+      font-size: 1rem;
+    }
+  }
+  
