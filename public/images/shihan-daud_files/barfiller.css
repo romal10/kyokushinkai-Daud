@@ -1,0 +1,28 @@
+.progress-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    max-width: 90%; /* Responsive width */
+    margin: 20px auto;
+}
+
+.ab-item {
+    display: flex; /* Use flexbox for each item */
+    justify-content: space-between; /* Space between label and bar */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    height: 15px;
+    overflow: hidden;
+    flex-grow: 1; /* Allow the bar to grow and take available space */
+    margin-left: 10px; /* Space between text and bar */
+}
+
+.fill {
+    height: 100%;
+    background: #f36100;
+    transition: width 1s;
+}

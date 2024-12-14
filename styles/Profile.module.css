@@ -1,0 +1,184 @@
+/* styles/Profile.module.css */
+
+.profilePage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .profileHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .profileImage {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+  }
+  
+  .profileInfo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .profileInfo .position {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+  }
+  
+  .profileText p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .readMoreBtn {
+    padding: 10px 20px;
+    background-color: #fd7e14;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .readMoreBtn:hover {
+    background-color: #ff5e00;
+  }
+  
+  /* Gallery Section */
+  .gallery {
+    margin-top: 50px;
+  }
+  
+  .gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .imageSlider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sliderImage {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .prevBtn, .nextBtn {
+    padding: 10px 20px;
+    background-color: #fd7e14;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .prevBtn:hover, .nextBtn:hover {
+    background-color: #ff5e00;
+  }
+  
+  /* Reviews Section */
+  .reviews {
+    margin-top: 40px;
+  }
+  
+  .reviews h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .rating {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .stars {
+    color: gold;
+  }
+  
+  .comments {
+    margin-top: 20px;
+  }
+  
+  .comment {
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .comment p {
+    font-size: 1rem;
+  }
+  
+  .backBtn {
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .backBtn:hover {
+    background-color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profileHeader {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .profileImage {
+      width: 150px;
+      height: 150px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .profileText p {
+      font-size: 1rem;
+    }
+  
+    .readMoreBtn {
+      font-size: 14px;
+    }
+  
+    .comment p {
+      font-size: 14px;
+    }
+  
+    .sliderImage {
+      max-width: 100%;
+    }
+  
+    .prevBtn, .nextBtn, .backBtn {
+      font-size: 14px;
+    }
+  }
+  

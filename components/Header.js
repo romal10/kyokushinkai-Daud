@@ -13,6 +13,13 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close the menu when a link is clicked (on mobile)
+  const closeMenu = () => {
+    if (window.innerWidth <= 768) {
+      setIsMenuOpen(false); // Close the menu on mobile
+    }
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -29,12 +36,12 @@ const Header = () => {
       {/* Navigation Menu */}
       <nav className={`${styles.nav} ${isMenuOpen ? styles.active : ''}`}>
         <ul>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/classes">Classes</Link></li>
-          <li><Link href="/services">Services</Link></li>
-          <li><Link href="/our-team">Our Team</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link href="/about" onClick={closeMenu}>About</Link></li>
+          <li><Link href="/classes" onClick={closeMenu}>Classes</Link></li>
+          <li><Link href="/services" onClick={closeMenu}>Services</Link></li>
+          <li><Link href="/our-team" onClick={closeMenu}>Our Team</Link></li>
+          <li><Link href="/contact" onClick={closeMenu}>Contact</Link></li>
         </ul>
       </nav>
     </header>

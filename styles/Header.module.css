@@ -16,14 +16,6 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo Styling */
-.logo img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
 /* Burger icon for mobile */
 .burger {
   display: none;

@@ -8,7 +8,8 @@ const Footer = () => {
       <div className={styles.footerContent}>
         <div className={styles.footerDescription}>
           <h2>Empowering our community through the art of Kyokushin Karate.</h2>
-          <p>Strength, discipline, and personal growth with every step.</p>
+          <p>Dedicated to empowering our community through the art of International Federation of Karate Kyokushinkai (F.I.K.K).</p>
+
         </div>
 
         <div className={styles.footerLinks}>
