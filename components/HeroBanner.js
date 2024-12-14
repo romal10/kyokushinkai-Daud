@@ -1,4 +1,3 @@
-// components/HeroBanner.js
 import Image from 'next/image'; // Importing Next.js Image component
 import styles from "../styles/HeroBanner.module.css"; // Importing the CSS file for styling
 
@@ -18,8 +17,11 @@ const HeroBanner = () => {
       {/* Hero Content */}
       <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>Shape your Body</h1>
-        <p>Be Strong!</p>
-        <p>Train Hard!</p>
+        <p className={styles.subtitle}>
+          <span className={styles.boldText}>Be Strong!</span>
+          <br />
+          Train Hard!
+        </p>
         
         {/* Button for More Info */}
         <button className={styles.heroButton}>Explore More</button>

@@ -1,78 +1,103 @@
 /* styles/HeroBanner.module.css */
 
-/* The hero section's container */
 .heroBanner {
-  position: relative; /* Make sure the content can be layered above the image */
-  height: 60vh; /* Set the height to 60% of the viewport height */
-  margin-bottom: 50px; /* Provide more spacing between the hero section and next content */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  height: 80vh; /* Adjusted to make the banner slimmer */
+  overflow: hidden;
 }
 
 .heroImageWrapper {
-  position: absolute; /* Position the image behind the content */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Ensure the image stays in the background */
+  z-index: -1;
 }
 
 .heroContent {
-  position: relative; /* Position the content above the image */
-  z-index: 1; /* Ensure the text is above the image */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: #fff;
   padding: 20px;
-  font-size: 1.2rem;
-  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
-.heroContent h1 {
-  font-size: 3rem; /* Adjust heading size */
-  margin-bottom: 10px;
+.heroTitle {
+  font-size: 3rem;
   font-weight: bold;
-  color: orange; /* Apply orange color for the main heading */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease-out;
 }
 
-.heroContent p {
+.subtitle {
   font-size: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-  font-weight: 300;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.2s ease-out;
 }
 
-/* Button styling */
+.boldText {
+  font-weight: 900;
+  color: #fd7e14; /* Matching the home button color */
+}
+
 .heroButton {
-  background-color: orange; /* Main button color */
-  color: white; /* Button text color */
+  padding: 15px 40px;
   font-size: 1.2rem;
-  padding: 10px 20px;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
+  background-color: #fd7e14; /* Match home button color */
+  color: white;
   cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  outline: none;
 }
 
 .heroButton:hover {
-  background-color: darkorange; /* Darken the button color on hover */
+  background-color: #ff5e00;
+  transform: scale(1.1);
 }
 
-/* Make the hero section responsive */
+.heroContent:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .heroContent h1 {
+  .heroContent {
+    padding: 15px;
+  }
+
+  .heroTitle {
     font-size: 2rem;
   }
 
-  .heroContent p {
-    font-size: 1.2rem;
+  .subtitle {
+    font-size: 1rem;
   }
 
   .heroButton {
     font-size: 1rem;
-    padding: 8px 16px;
+    padding: 12px 30px;
   }
 }
