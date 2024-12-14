@@ -198,3 +198,21 @@
     font-size: 14px;
   }
 }
+
+/* Home.module.css */
+
+/* Awards Slider Section */
+.awardsSection {
+  margin: 50px 0;
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+}
+
+.awardsSection h2 {
+  font-size: 2.5rem;
+  color: #fd7e14;
+  margin-bottom: 30px;
+}
+
+/* You can customize further styles specific to the AwardsSlider if needed */

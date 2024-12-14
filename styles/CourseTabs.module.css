@@ -1,0 +1,109 @@
+/* CourseTabs.module.css */
+
+/* Courses Section */
+.coursesOverview {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .coursesTitle {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .tabsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .tabButton {
+    background-color: #fd7e14;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    width: 200px;
+  }
+  
+  .tabButton:hover {
+    background-color: #d76b0f;
+    transform: scale(1.05);
+  }
+  
+  .tabButton i {
+    font-size: 1.5rem;
+  }
+  
+  .tabContent {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .tabPanel {
+    display: block;
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .viewCoursesBtnContainer {
+    margin-top: 30px;
+  }
+  
+  .viewCoursesBtn {
+    background-color: #fd7e14;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .viewCoursesBtn:hover {
+    background-color: #d76b0f;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .tabs {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .tabButton {
+      width: 100%;
+      margin: 5px 0;
+    }
+  
+    .viewCoursesBtnContainer {
+      text-align: center;
+    }
+  }
+  

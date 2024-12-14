@@ -1,0 +1,146 @@
+/* AwardsSlider.module.css */
+
+/* Wrapper for the Awards and Certifications Title */
+.sliderWrapper {
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px 30px; /* Adding padding on the sides */
+    text-align: center;
+}
+
+/* Slider Title */
+.sliderTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; /* Dark color for text */
+    margin-bottom: 20px; /* Space between title and slider */
+    text-align: center; /* Centering the title */
+}
+
+/* Container for the slider */
+.sliderContainer {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: transparent; /* Transparent background */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Soft shadow around the slider */
+    overflow: hidden;
+}
+
+/* Slider Content */
+.sliderContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Award Image */
+.awardImage {
+    max-width: 400px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
+}
+
+/* Award Details */
+.awardDetails {
+    max-width: 320px;
+    text-align: center;
+}
+
+.awardTitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fd7e14; /* Professional, clean orange color */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.awardDescription {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Navigation Buttons */
+.prevButton,
+.nextButton {
+    background-color: #fd7e14; /* Matches the color of home page buttons */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.2s ease-out; /* Reduced transition time */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for buttons */
+}
+
+
+/* Reduced Hover Effect */
+.prevButton:hover,
+.nextButton:hover {
+    background-color: #d76b0f; /* Slightly darker orange for hover */
+    transform: scale(1.05); /* Reduced scale effect for a more subtle hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+/* Disabled state */
+.prevButton:disabled,
+.nextButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none; /* Remove shadow for disabled state */
+}
+
+/* Left and Right Button Positions (Desktop) */
+.prevButton {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.nextButton {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+/* Mobile View: Buttons Below the Slider and Centered */
+@media (max-width: 768px) {
+    .sliderContent {
+        flex-direction: column; /* Stack the content vertically */
+        text-align: center; /* Center text */
+    }
+
+    .awardDetails {
+        margin-top: 20px;
+    }
+
+    /* Mobile: Positioning buttons below the slider */
+    .prevButton,
+    .nextButton {
+        position: static; /* Reset position */
+        margin: 20px auto; /* Center the buttons horizontally */
+        display: block; /* Make the buttons block elements */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for buttons below */
+    }
+
+    /* Adjust padding for mobile */
+    .sliderContainer {
+        padding: 30px 15px;
+    }
+
+    /* Heading Adjustment */
+    .sliderTitle {
+        font-size: 2rem; /* Make the title smaller for mobile */
+        margin-bottom: 20px;
+    }
+}

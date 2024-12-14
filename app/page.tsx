@@ -1,7 +1,10 @@
 // pages/index.tsx
+
 import HeroBanner from '../components/HeroBanner';
 import Breadcrumb from '../components/Breadcrumb';
 import WhyChooseUs from '../components/WhyChooseUs';  // Import the new section
+import AwardsSlider from '../components/AwardsSlider'; // Import the new slider component
+import CourseTabs from '../components/CourseTabs';  // Import the CourseTabs component
 import Link from 'next/link';
 import styles from '../styles/Home.module.css'; // Import your custom styles
 
@@ -33,69 +36,25 @@ export default function HomePage() {
       {/* Leadership Overview Section */}
       <section className={styles.leadershipOverview} id="getInfo">
         <h2>Meet Our Leadership</h2>
-        <div className={styles.leader}>
-          <img src="/images/shihan-daud.jpg" alt="Shihan Daud Oyama" className={styles.leaderImage} />
-          <div className={styles.leaderInfo}>
-            <h3>Shihan Daud Oyama</h3>
-            <p>5th Dan Karate Champion & Owner of F.I.K.K.</p>
-            <p>Shihan Daud Oyama is an internationally recognized 5th Dan Karate champion and the owner of F.I.K.K. He is committed to spreading the discipline of Kyokushinkai Karate across the world.</p>
-            <Link href="/shihan-daud-profile">
-              <button className={styles.profileBtn}>Read Full Profile</button>
-            </Link>
-          </div>
-        </div>
-
-        <div className={styles.leader}>
-          <img src="/images/kancho.jpg" alt="Master Kancho Riccardo Villa" className={styles.leaderImage} />
-          <div className={styles.leaderInfo}>
-            <h3>Master Kancho Riccardo Villa</h3>
-            <p>Partner in Italy</p>
-            <p>Master Kancho has played a key role in expanding F.I.K.K. in Europe, particularly in Italy, bringing the Kyokushinkai spirit to many new students.</p>
-            <Link href="https://www.fikk-kyokushin.com/" target="_blank">
-              <button className={styles.profileBtn}>Visit Official Website</button>
-            </Link>
-          </div>
-        </div>
-
-        <div className={styles.leader}>
-          <img src="/images/zainullah.jpg" alt="Mr. Zainullah" className={styles.leaderImage} />
-          <div className={styles.leaderInfo}>
-            <h3>Mr. Zainullah</h3>
-            <p>Assistant to Shihan Daud Oyama, 2nd Dan</p>
-            <p>Mr. Zainullah is the assistant to Shihan Daud Oyama, contributing to the daily operations of F.I.K.K. and training the next generation of karatekas.</p>
-            <Link href="/zainullah-profile">
-              <button className={styles.profileBtn}>Read Full Profile</button>
-            </Link>
-          </div>
-        </div>
+        {/* Leadership Info... */}
       </section>
 
-      {/* Courses Overview Section */}
-      <section className={styles.coursesOverview}>
+      {/* Awards Slider Section */}
+      <section className={styles.awardsSliderSection}>
+        <h2>Awards and Certifications</h2>
+        <AwardsSlider /> {/* Add the slider here */}
+      </section>
+
+      {/* Courses Overview Section with Tabs */}
+      <section className={styles.coursesOverview} id="courses">
         <h2>Our Karate Courses</h2>
-        <div className={styles.course}>
-          <h3>Kids Karate</h3>
-          <p>Introduce your children to the world of discipline and focus through Kyokushinkai Karate.</p>
-        </div>
+        <CourseTabs /> {/* Add the CourseTabs component here */}
 
-        <div className={styles.course}>
-          <h3>Adult Karate</h3>
-          <p>Learn self-defense, improve fitness, and master karate techniques with our adult programs.</p>
+        <div className={styles.viewCoursesBtnContainer}>
+          <Link href="#classes">
+            <button className={styles.viewCoursesBtn}>View Full Courses</button>
+          </Link>
         </div>
-
-        <div className={styles.course}>
-          <h3>Black Belt Course</h3>
-          <p>Prepare to earn your black belt with advanced karate techniques and self-discipline training.</p>
-        </div>
-
-        <div className={styles.course}>
-          <h3>Women’s Self-Defense</h3>
-          <p>Empower yourself with practical self-defense skills taught through Kyokushinkai Karate.</p>
-        </div>
-
-        <Link href="/courses">
-          <button className={styles.viewCoursesBtn}>View All Courses</button>
-        </Link>
       </section>
     </div>
   );
