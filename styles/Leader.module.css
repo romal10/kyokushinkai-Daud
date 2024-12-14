@@ -1,0 +1,108 @@
+/* styles/Leader.module.css */
+
+/* New section container for leaders */
+.leadersSection {
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+/* Heading for the section */
+.leadersSection h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Leadership Profile container */
+.leaderProfiles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures responsive design */
+    gap: 30px;
+}
+
+/* Individual profile card styling */
+.leaderCard {
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-out;
+}
+
+/* Hover effect for each profile card */
+.leaderCard:hover {
+    transform: translateY(-5px); /* Lift the profile card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}
+
+/* Circular image for each profile */
+.leaderImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+    margin-bottom: 20px;
+}
+
+/* Hover effect for the image */
+.leaderImage:hover {
+    transform: scale(1.1); /* Slightly zoom in the image */
+}
+
+/* Name and Title styling */
+.leaderCard h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fd7e14; /* Brand color */
+    margin-bottom: 10px;
+}
+
+.leaderCard p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.profileBtn {
+    background-color: #fd7e14;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.profileBtn:hover {
+    background-color: #d76b0f;
+    transform: scale(1.05);
+}
+
+.profileBtn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .leaderProfiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leaderCard {
+        width: 90%;
+    }
+}
