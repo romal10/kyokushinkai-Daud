@@ -1,0 +1,27 @@
+/* styles/Breadcrumb.module.css */
+.breadcrumb {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    margin-top: -50px; /* Adjust based on your layout */
+  }
+  
+  .breadcrumb ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .breadcrumb li {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .breadcrumb li a {
+    text-decoration: none;
+    color: #fd7e14; /* Orange color for links */
+  }
+  
+  .breadcrumb li a:hover {
+    color: #ff7a00; /* Hover color */
+  }
+  

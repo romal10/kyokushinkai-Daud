@@ -14,3 +14,18 @@ body {
 html, body {
   height: 100%;
 }
+
+/* Global styles or specific page styles */
+.mainContent {
+  padding: 30px 20px;
+  background-color: #f4f4f4; /* Optional background color for content area */
+}
+
+.mainContent h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.mainContent p {
+  font-size: 1.2rem;
+}

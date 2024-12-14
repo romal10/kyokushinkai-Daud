@@ -1,11 +1,16 @@
 // app/page.tsx
-import Main from '../components/Main';
-import '../styles/Home.module.css'; // Home-specific styles (optional)
+import HeroBanner from '../components/HeroBanner';
+import Breadcrumb from '../components/Breadcrumb';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="home-page">
-      <Main />
+    <div>
+      <HeroBanner />
+      <Breadcrumb />
+      <div className="content">
+        <h2>About Our Services</h2>
+        <p>Here you can add more content to your homepage...</p>
+      </div>
     </div>
   );
 }

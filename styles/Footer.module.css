@@ -1,10 +1,124 @@
+/* Footer.module.css */
+
+/* Basic footer styling */
 .footer {
-    background-color: #282c34;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  border-top: 5px solid #fd7e14; /* Orange accent for a modern touch */
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+
+.footerDescription {
+  width: 35%;
+}
+
+.footerDescription h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fd7e14; /* Orange color for title */
+}
+
+.footerDescription p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.footerLinks,
+.recentPosts {
+  width: 30%;
+}
+
+.footerLinks h3,
+.recentPosts h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fd7e14; /* Orange color for section headers */
+}
+
+.footerLinks ul,
+.recentPosts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerLinks li,
+.recentPosts li {
+  margin-bottom: 12px;
+}
+
+.footerLinks a,
+.recentPosts a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footerLinks a:hover,
+.recentPosts a:hover {
+  color: #fd7e14;
+  text-decoration: underline;
+}
+
+.recentPosts span {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Footer bottom section */
+.footerBottom {
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+.footerBottom p {
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .footerDescription,
+  .footerLinks,
+  .recentPosts {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footerDescription h2 {
+    font-size: 22px;
+  }
+
+  .footerLinks h3,
+  .recentPosts h3 {
+    font-size: 18px;
+  }
+
+  .footerLinks ul,
+  .recentPosts ul {
+    padding-left: 0;
+  }
+}

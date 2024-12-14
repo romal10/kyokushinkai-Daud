@@ -1,25 +1,35 @@
 // app/layout.tsx
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import '../styles/layout.module.css'; // Import the layout-specific styles
+import Header from '../components/Header'; // Import Header component
+import Breadcrumb from '../components/Breadcrumb'; // Import Breadcrumb component
+import Footer from '../components/Footer'; // Optional Footer component
+import './globals.css'; // Global styles (optional)
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export const metadata = {
+  title: 'Your Website Title',
+  description: 'Description of your website.',
+};
+
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
+    <html lang="en"> {/* No extra space here */}
       <head>
-        {/* You can add custom meta tags, title, and other head elements here */}
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Next.js App</title>
+        {/* You can add metadata or links to external stylesheets here if needed */}
       </head>
       <body>
-        <div className="layout-container">
-          <Header />
-          <main className="main">{children}</main>
-          <Footer />
-        </div>
+        {/* Global Header */}
+        <Header />
+        
+        {/* Global Breadcrumb - optional */}
+        <Breadcrumb />
+
+        {/* Main Content */}
+        <main>{children}</main>
+
+        {/* Global Footer - optional */}
+        <Footer />
       </body>
     </html>
   );
-}
+};
+
+export default Layout;

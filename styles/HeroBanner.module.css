@@ -1,0 +1,78 @@
+/* styles/HeroBanner.module.css */
+
+/* The hero section's container */
+.heroBanner {
+  position: relative; /* Make sure the content can be layered above the image */
+  height: 60vh; /* Set the height to 60% of the viewport height */
+  margin-bottom: 50px; /* Provide more spacing between the hero section and next content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImageWrapper {
+  position: absolute; /* Position the image behind the content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure the image stays in the background */
+}
+
+.heroContent {
+  position: relative; /* Position the content above the image */
+  z-index: 1; /* Ensure the text is above the image */
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.heroContent h1 {
+  font-size: 3rem; /* Adjust heading size */
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: orange; /* Apply orange color for the main heading */
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Button styling */
+.heroButton {
+  background-color: orange; /* Main button color */
+  color: white; /* Button text color */
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.heroButton:hover {
+  background-color: darkorange; /* Darken the button color on hover */
+}
+
+/* Make the hero section responsive */
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1.2rem;
+  }
+
+  .heroButton {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
