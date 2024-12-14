@@ -38,7 +38,7 @@ const Header = () => {
         <ul>
           <li><Link href="/" onClick={closeMenu}>Home</Link></li>
           <li><Link href="/about" onClick={closeMenu}>About</Link></li>
-          <li><Link href="/classes" onClick={closeMenu}>Classes</Link></li>
+          <li><Link href="/classes" onClick={closeMenu}>Classes</Link></li> {/* "Classes" link works fine */}
           <li><Link href="/services" onClick={closeMenu}>Services</Link></li>
           <li><Link href="/our-team" onClick={closeMenu}>Our Team</Link></li>
           <li><Link href="/contact" onClick={closeMenu}>Contact</Link></li>

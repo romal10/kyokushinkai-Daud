@@ -1,0 +1,140 @@
+/* styles/Classes.module.css */
+
+/* Page container with padding and layout */
+.classesPage {
+    padding: 50px 20px;
+}
+
+/* Title for the page */
+.pageTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Emphasize title */
+}
+
+/* Class Section container */
+.classSection {
+    display: flex;
+    flex-direction: column; /* Stack image on top */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for container */
+    background-color: #fff;
+    transition: transform 0.3s ease-out;
+    max-width: 750px; /* Control max width of each container */
+    margin: 20px auto; /* Center and give margin */
+}
+
+.classSection:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Image styling for desktop */
+.classImage {
+    max-width: 350px; /* Fixed size for desktop */
+    width: 100%; /* Ensure it scales down on mobile */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow for image */
+}
+
+/* Info text styling */
+.classInfo {
+    flex: 1;
+    padding: 0 10px;
+    text-align: center;
+    max-width: 600px; /* Limit text width for better readability */
+}
+
+/* Main heading for each class */
+.classInfo h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fd7e14; /* Use the brand color for headings */
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 1px;
+}
+
+/* Paragraphs with description */
+.classInfo p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+/* Additional paragraph for extra details */
+.classInfo .additionalDetails {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #777; /* Lighter color for extra details */
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Book Button styling */
+.bookBtn {
+    background-color: #fd7e14; /* Matches the main brand color */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 200px; /* Max width for button */
+}
+
+/* Book Button hover effect */
+.bookBtn:hover {
+    background-color: #d76b0f; /* Slightly darker color on hover */
+    transform: scale(1.05);
+}
+
+/* Book Button focus effect */
+.bookBtn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    /* Ensure compact layout on small screens */
+    .classSection {
+        margin-bottom: 20px;
+        padding: 15px;
+        width: 100%; /* Ensure it takes the full width */
+    }
+
+    .classInfo {
+        padding: 0 10px;
+    }
+
+    /* Reduce button padding and size on mobile */
+    .bookBtn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        max-width: 180px; /* Smaller button size on mobile */
+    }
+
+    /* Image on mobile view */
+    .classImage {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px; /* Space between image and text */
+    }
+}

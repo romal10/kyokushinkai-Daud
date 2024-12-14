@@ -51,7 +51,7 @@ export default function HomePage() {
         <CourseTabs /> {/* Add the CourseTabs component here */}
 
         <div className={styles.viewCoursesBtnContainer}>
-          <Link href="#classes">
+          <Link href="/classes">
             <button className={styles.viewCoursesBtn}>View Full Courses</button>
           </Link>
         </div>
