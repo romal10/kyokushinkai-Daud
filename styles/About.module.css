@@ -1,80 +1,65 @@
 /* General Styles */
 .aboutPage {
-    padding: 100px 20px 20px; /* Add padding to the top */
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  padding: 150px 20px 20px; /* Increased padding at the top to move content further below the header */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* History Section */
 .historySection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-    background-color: #f4f4f4;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Ensures text is centered */
-  }
-  
-  /* History Section Image (Mas Oyama) */
-  .historyImage {
-    display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center; /* Centers the image vertically */
-    margin-bottom: 20px; /* Space between image and text */
-  }
-  
-  .historyImage img {
-    width: 250px !important; /* Adjusted width */
-    height: auto !important; /* Maintain aspect ratio */
-    display: block;
-    margin-left: auto;
-    margin-right: auto; /* Centers the image */
-    border-radius: 50%; /* Makes the image round */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both zoom and shadow */
-  }
-  
-  /* Hover effect for image */
-  .historyImage img:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
-  }
-  
-  /* History Text */
-  .historyText {
-    flex: 1; /* Ensures the text section takes available space */
-    text-align: center; /* Centers the text */
-  }
-  
-  .historyText h2 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .historyText p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  
-  
-  .historyText {
-    flex: 1;
-  }
-  
-  .historyText h2 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .historyText p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  background-color: #f4f4f4;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Ensures text is centered */
+}
+
+/* History Section Image (Mas Oyama) */
+.historyImage {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+.historyImage img {
+  width: 250px !important; /* Adjusted width */
+  height: auto !important; /* Maintain aspect ratio */
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Centers the image */
+  border-radius: 50%; /* Makes the image round */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both zoom and shadow */
+}
+
+/* Hover effect for image */
+.historyImage img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* History Text */
+.historyText {
+  flex: 1; /* Ensures the text section takes available space */
+  text-align: center; /* Centers the text */
+}
+
+.historyText h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.historyText p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
   
 /* F.I.K.K Section */
 .fikkSection {
