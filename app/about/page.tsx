@@ -1,7 +1,6 @@
 // pages/about.tsx
 
 import styles from '../../styles/About.module.css'; 
-
 import Link from 'next/link';
 
 const AboutPage = () => {
@@ -42,35 +41,37 @@ const AboutPage = () => {
         </div>
         <div className={styles.fikkImage}>
         <img src="/images/fikk-logo.png" alt="F.I.K.K. Organization" className={styles.fikkLogo} />
-
         </div>
       </section>
 
       {/* Leadership Section */}
       <section className={styles.leadershipSection}>
-        <div className={styles.leaderCard}>
-          <img src="/images/kancho.jpg" alt="Master Kancho Riccardo Villa" />
-          <h3>Kancho Riccardo Villa</h3>
-          <p>World Chief of F.I.K.K.</p>
-          <Link href="https://www.fikk-kyokushin.com/">
-            <button className={styles.profileBtn}>Visit Official Website</button>
-          </Link>
-        </div>
-        <div className={styles.leaderCard}>
-          <img src="/images/shihan-daud.jpg" alt="Master Shihan Daud Oyama" />
-          <h3>Shihan Daud Oyama</h3>
-          <p>Country Representative - Afghanistan</p>
-          <Link href="/shihan-daud-profile">
-            <button className={styles.profileBtn}>Read Full Profile</button>
-          </Link>
-        </div>
-        <div className={styles.leaderCard}>
-          <img src="/images/zainullah.jpg" alt="Assistant Master Zainullah" />
-          <h3>Assistant Master Zainullah</h3>
-          <p>Assistant to Shihan Daud Oyama</p>
-          <Link href="/zainullah-profile">
-            <button className={styles.profileBtn}>Read Full Profile</button>
-          </Link>
+        <h2 className={styles.leadershipHeader}>Leadership of F.I.K.K.</h2>
+        <div className={styles.leaderCards}>
+          <div className={styles.leaderCard}>
+            <img src="/images/kancho.jpg" alt="Master Kancho Riccardo Villa" />
+            <h3>Kancho Riccardo Villa</h3>
+            <p>World Chief of F.I.K.K.</p>
+            <Link href="https://www.fikk-kyokushin.com/">
+              <button className={styles.profileBtn}>Visit Official Website</button>
+            </Link>
+          </div>
+          <div className={styles.leaderCard}>
+            <img src="/images/shihan-daud.jpg" alt="Master Shihan Daud Oyama" />
+            <h3>Shihan Daud Oyama</h3>
+            <p>Country Representative - Afghanistan</p>
+            <Link href="/shihan-daud-profile">
+              <button className={styles.profileBtn}>Read Full Profile</button>
+            </Link>
+          </div>
+          <div className={styles.leaderCard}>
+            <img src="/images/zainullah.jpg" alt="Assistant Master Zainullah" />
+            <h3>Assistant Master Zainullah</h3>
+            <p>Assistant to Shihan Daud Oyama</p>
+            <Link href="/zainullah-profile">
+              <button className={styles.profileBtn}>Read Full Profile</button>
+            </Link>
+          </div>
         </div>
       </section>
 
