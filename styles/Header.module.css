@@ -22,6 +22,9 @@
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
+  position: absolute;
+  top: 20px; /* Adjusting for top space */
+  right: 20px; /* Aligning the burger icon to the top right corner */
 }
 
 .burger span {
@@ -116,6 +119,28 @@
     padding: 15px;
     font-size: 18px;
   }
+
+  /* Center Social media icons horizontally within header */
+  .socialMedia {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 20px;
+    position: absolute;
+    top: 50%; /* Position it vertically centered in header */
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); /* Center horizontally and vertically */
+    z-index: 1001; /* Make sure it stays above other content */
+  }
+
+  .socialIcon {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .socialIcon:hover {
+    color: #fd7e14; /* Highlight on hover */
+  }
 }
 
 /* Desktop View - above 768px */
@@ -137,5 +162,21 @@
 
   .nav li {
     padding: 10px 20px;
+  }
+
+  /* Social media icons in desktop */
+  .socialMedia {
+    display: flex;
+    gap: 20px;
+  }
+
+  .socialIcon {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .socialIcon:hover {
+    color: #fd7e14; /* Highlight on hover */
   }
 }

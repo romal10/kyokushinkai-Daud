@@ -2,7 +2,7 @@
 
 import Image from 'next/image'; // Importing Next.js Image component
 import Link from 'next/link'; // For navigation
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../styles/Header.module.css';
 
 const Header = () => {
@@ -19,6 +19,14 @@ const Header = () => {
       setIsMenuOpen(false); // Close the menu on mobile
     }
   };
+
+  // Add Font Awesome script dynamically
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js';
+    script.onload = () => console.log('Font Awesome loaded');
+    document.body.appendChild(script);
+  }, []); // Empty dependency array ensures this runs once after the component mounts
 
   return (
     <header className={styles.header}>
@@ -38,12 +46,28 @@ const Header = () => {
         <ul>
           <li><Link href="/" onClick={closeMenu}>Home</Link></li>
           <li><Link href="/about" onClick={closeMenu}>About</Link></li>
-          <li><Link href="/classes" onClick={closeMenu}>Classes</Link></li> {/* "Classes" link works fine */}
+          <li><Link href="/classes" onClick={closeMenu}>Classes</Link></li>
           <li><Link href="/services" onClick={closeMenu}>Services</Link></li>
           <li><Link href="/our-team" onClick={closeMenu}>Our Team</Link></li>
           <li><Link href="/contact" onClick={closeMenu}>Contact</Link></li>
         </ul>
       </nav>
+
+      {/* Social Media Icons */}
+      <div className={styles.socialMedia}>
+        <a href="https://www.facebook.com" target="_blank" className={styles.socialIcon}>
+          <i className="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" className={styles.socialIcon}>
+          <i className="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" className={styles.socialIcon}>
+          <i className="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" className={styles.socialIcon}>
+          <i className="fab fa-linkedin"></i>
+        </a>
+      </div>
     </header>
   );
 };
