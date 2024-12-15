@@ -1,15 +1,12 @@
-import HeroBanner from './components/HeroBanner';
-import Breadcrumb from './components/Breadcrumb';
+// pages/index.js
+
+const myVar = process.env.NEXT_PUBLIC_MY_VARIABLE;
 
 export default function Home() {
   return (
     <div>
-      <HeroBanner />
-      <Breadcrumb />
-      <div className="content">
-        <h2>About Our Services</h2>
-        <p>Here you can add more content to your homepage...</p>
-      </div>
+      <h1>Welcome to the Homepage</h1>
+      <p>The value of the environment variable is: {myVar}</p>
     </div>
   );
 }
