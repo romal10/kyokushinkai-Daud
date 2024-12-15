@@ -1,12 +1,27 @@
 "use client"; // Indicate that this is a client-side component
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../styles/CourseTabs.module.css';
 import { FaChild, FaUsers, FaAward, FaFemale } from 'react-icons/fa'; // Importing icons
 
 const CourseTabs = () => {
-  // Use state to track the active tab
+  // State to track the active tab
   const [activeTab, setActiveTab] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Check if there's a previously selected tab in localStorage
+    const savedTab = localStorage.getItem('activeTab');
+    
+    // If a tab is found in localStorage, use it. Otherwise, default to "kids"
+    setActiveTab(savedTab || 'kids');
+  }, []);
+
+  useEffect(() => {
+    // Save the active tab to localStorage whenever it changes
+    if (activeTab) {
+      localStorage.setItem('activeTab', activeTab);
+    }
+  }, [activeTab]);
 
   const handleTabClick = (tab: string) => {
     // Toggle the tab description visibility
