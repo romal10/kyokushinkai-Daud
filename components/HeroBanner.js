@@ -7,7 +7,7 @@ const HeroBanner = () => {
       {/* Hero Image */}
       <div className={styles.heroImageWrapper}>
         <Image
-          src="/images/hero-jpg/hero.jpg" // Path to the image in the public folder
+          src="/hero.jpg" // Path to the image in the public folder
           alt="Hero Image"
           layout="fill" // Ensures the image covers the whole section
           objectFit="cover" // Ensures the image covers the section without distortion
